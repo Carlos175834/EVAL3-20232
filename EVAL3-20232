@@ -1,0 +1,76 @@
+import os
+os.system("cls")
+
+tipo = []
+patente = []
+marca = []
+precio = []
+multas = []
+fregistro = []
+
+
+menu = """
+1- Grabar
+2- Buscar
+3- Imprimir certificados
+4- Salir
+"""        
+print(menu)
+opc = int(input("Seleccione una de las opciones"))
+
+
+def grabar():
+    tipo = input("Ingrese el Tipo de vehiculo: ")
+    if not 4 <= len(tipo) <= 10:
+        print("El tipo de vehiculo debe contener entre 4 y 6 caracteres")
+        return None
+
+    patente = input("Ingrese la patente del Vehiculo: ")
+    if not 5 <= len(patente) <= 6:
+        print("La patente debe tener entre 5 y 6 caracteres")
+        return None
+
+    marca = input("Ingrese la marca del Vehiculo: ")
+
+
+    precio = input("Ingrese el precio del Vehiculo: ")
+    if precio <= 0:
+        print("El precio debe ser mayor a 0")
+        return None
+
+    multas = input("Ingrese las Multas del Vehiculo (monto/fecha): ")
+    if multas <= 0:
+        print("")
+
+    fech_registro = input("Ingrese la Fecha de Registro del Vehiculo: ")
+
+
+    nom_dueÃ±o = input("Ingrese el Nombre del DueÃ±o del Vehiculo: ")
+    if not 2 <= len(nom_dueÃ±o) <= 50:
+        print("El Nombre debe tener entre 2 y 50 Caracteres")
+        return None
+
+
+def buscar(vehiculos, patente):
+    for vehiculo in vehiculos:
+        if vehiculo == patente:
+            return vehiculo
+    return None
+
+def imprimir_certificados():
+    while True:
+        print("hola")
+
+
+
+
+
+    
+    
+    
+def salir():
+    while True:
+        if opc == 4:
+            print("Gracias por Su Preferencia: ")
+            input("Enter para terminar")
+            break
